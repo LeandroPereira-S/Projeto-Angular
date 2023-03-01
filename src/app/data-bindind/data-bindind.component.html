@@ -1,0 +1,66 @@
+<!--<section class="Property-Binding">
+   <article>
+        <h3> Interpolation / interpolação </h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1+1 }}</p>
+        <p>Resultado de 1 +1 não é {{ 1 + 1 + getValor()}}</p>
+        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+       </article>
+
+       <article>
+        <h3>property-binding</h3>
+        <img src="{{ urlImagem }}" >
+        <img [src]="urlImagem">
+       </article> -->
+
+   <!-- <article>
+        <h3>Class e Style Binding</h3>
+        <div>Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">sucesso</option>
+                <option value="alert-info">info</option>
+                <option value="alert-warning">alerta</option>
+                <option value="alert-danger">erro</option>
+            </select>
+            <br><br>
+    <div class="alert {{ classe.value }}" role="alert"></div>
+            <div class="alert" role="alert" [class.alert-success]="classe.value =='alert-success'">sucesso</div>
+    
+            <div class="alert" role="alert" [class.alert-success]="classe.value =='alert-info'">Info</div>
+    
+            <div class="alert" role="alert" [class.alert-success]="classe.value =='alert-warning'">Alerta</div>
+    
+            <div class="alert" role="alert" [class.alert-success]="classe.value =='alert-danger'">Erro</div>
+    
+        </div>
+    </article>
+    </section> -->
+    
+    <section class="Event-Binding">
+    <article>
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="botaoClicado()"
+             class="btn btn-primary">Me clique!
+            </button>
+            
+            <br><br>
+
+            <input type="text"
+            (keyup)="onKeyUp($event)"
+            (keyup.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarValor(campoInput.value)"
+            #campoInput />
+
+            <p>Valor atual: {{ valorAtual }}</p>
+            <p>Valor salvo: {{ valorSalvo }}</p>
+
+            <br>
+            <span
+            (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highligth]="isMouseOver">Passe o mouse sobre mim</span>
+
+        </div>
+    </article>
+</section>
